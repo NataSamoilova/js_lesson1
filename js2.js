@@ -115,7 +115,7 @@ switch (a){
 
 // Задание 5.
 // Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return. 
-/*
+
   function sum(a, b){
     return a + b;
   }
@@ -128,20 +128,49 @@ switch (a){
     return a - b; 
   }
   function division(a, b){
-     return a / b;
+    var result = (b === 0)? "Error: b = 0" : a / b;
+    return result;
   }
   
   console.log(multi(5, 3));
   console.log(sum(3, 4));
   console.log(diff(4, 5));
   console.log(division(0, 5));
-*/
 
-/*
-    
-    6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, 
+// Задание 6.
+/*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, 
     operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций 
-    (использовать функции из пункта 3) и вернуть полученное значение (использовать switch). 
-    7. *Сравнить null и 0. Попробуйте объяснить результат. 
+    (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).*/
+    
+    
+    function mathOperation(arg1, arg2, operation){
+        if (operation == undefined) {
+            operation = 'sum'
+        }
+        switch(operation.toLowerCase()){
+            case 'multi':
+              return multi(arg1, arg2);
+            case 'sum':
+              return sum(arg1, arg2);
+            case 'diff':
+              return diff(arg1, arg2);
+            case 'division':
+              return division(arg1, arg2);
+            default:
+              return 'Вы можете использовать следующие операции:\n-multi;\n-sum\n-diff\n-division';
+        }
+    }   
+        console.log("no args: " + mathOperation());
+        console.log("default op: " + mathOperation(1,2));
+        console.log("5х2 = " + mathOperation(5, 2, 'multi'));
+        console.log(mathOperation(5, 2, 'sum'));
+        console.log(mathOperation(5, 1, 'diff'));
+        console.log(mathOperation(5, 1, 'division'));
+    
+
+
+
+
+   /* 7. *Сравнить null и 0. Попробуйте объяснить результат. 
     8. *С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), 
     где val – заданное число, pow – степень.*/
