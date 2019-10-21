@@ -165,12 +165,15 @@ switch (a){
         console.log("5х2 = " + mathOperation(5, 2, 'multi'));
         console.log(mathOperation(5, 2, 'sum'));
         console.log(mathOperation(5, 1, 'diff'));
-        console.log(mathOperation(5, 1, 'division'));
+        console.log(mathOperation(7, 2, 'division'));
     
 
 
 
 
-   /* 7. *Сравнить null и 0. Попробуйте объяснить результат. 
+   // 7. *Сравнить null и 0. Попробуйте объяснить результат. 
+   console.log(null === 0) // false
+   console.log(null == 0) // false
+/*
     8. *С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), 
     где val – заданное число, pow – степень.*/
