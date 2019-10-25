@@ -25,6 +25,20 @@ for (var i = 0; i < goods.length; i++) {
 
 console.log('Total price: ', totalPrice);
 
+//Товары в корзине хранятся в массиве. Задачи:
+//a) Организовать такой массив для хранения товаров в корзине;
+//b) Организовать функцию countBasketPrice, которая будет считать стоимость корзины.
+var goods = [40, 70, 100, 300, 20, 250];
+
+var totalPrice2 = goods.reduce(function(acc, value) {
+  return acc + value;
+  }, 0);
+    
+  console.log('Total price #2: ', totalPrice2);
+
+//Вывести с помощью цикла for числа от 0 до 9, не используя тело цикла. 
+for (var i = 0; i < 10; console.log(i++)) {}
+
 // Нарисовать пирамиду с помощью console.log, как показано на рисунке, 
 //только у вашей пирамиды должно быть 20 рядов
 
